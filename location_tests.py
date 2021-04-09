@@ -14,7 +14,7 @@ class TestLocation(unittest.TestCase):
         loc = Location('Porterville', 36.07, 119.02)
         self.assertEqual(loc.name, 'Porterville')
         self.assertEqual(loc.lat, 36.07)
-        self.assertEqual(lopc.lon, 119.02)
+        self.assertEqual(loc.lon, 119.02)
 
     def test_eq(self):
         loc1 = Location('Porterville', 36.07, 119.02)
