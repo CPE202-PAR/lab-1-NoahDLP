@@ -7,7 +7,7 @@ class Location:
         self.lat = lat      # latitude in degrees (-90.0 to 90.0)
         self.lon = lon      # longitude in degrees (-180.0 to 180.0)
 
-    def __eq__(self, other):
+    def __eq__(self, other:object) -> bool:
         if isinstance(other, Location):
             return (self.name == other.name
             and self.lat == other.lat
@@ -15,7 +15,7 @@ class Location:
         else:
             return False
         
-    def __repr__(self):
+    def __repr__(self) -> str:
         return ("Location({!r}, {!r}, {!r})".format(self.name, self.lat, self.lon))
 
 def main() -> None:                 # pragma: no cover
