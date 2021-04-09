@@ -50,4 +50,4 @@ def reverse_list_mutate(int_list: Optional[List]) -> None:
    if int_list is None:
       raise ValueError
    else:
-      int_list[:] = reverse_list(int_list)
+      int_list[:] = reverse_list(int_list: Optional[List])
