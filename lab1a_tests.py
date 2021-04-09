@@ -40,7 +40,7 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(intlist,[5,3,8])
 
     def test_reverse_03(self) -> None:
-        intlist: typing.list[int] = []
+        intlist: list[int] = []
         revlist = reverse_list(intlist)
         self.assertEqual(revlist,[])
         self.assertEqual(intlist,[])
