@@ -43,7 +43,7 @@ def reverse_list(int_list: Optional[List]) -> Optional[List]:
 
 
 # Maybe_List -> None
-def reverse_list_mutate(int_list: Optional[List]) -> None:
+def reverse_list_mutate(int_list) :
    """reverses a list of numbers, modifying the input list, returns None
    If list is None, raises ValueError"""
 
