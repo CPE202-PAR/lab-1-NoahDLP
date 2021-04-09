@@ -9,9 +9,10 @@ class Location:
 
     def __eq__(self, other: object) -> bool:
         if isinstance(other, Location):
-            return (self.name == other.name
-            and self.lat == other.lat
-            and self.lon == other.lon)
+            return(self.name==other.name and
+                   self.lat==other.lat and
+                   self.lon==other.lon
+                   )
         else:
             return False
         
