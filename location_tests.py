@@ -21,6 +21,7 @@ class TestLocation(unittest.TestCase):
         loc2 = Location('Fresno', 36.74, 119.79)
         loc3 = Location('Porterville', 36.07, 119.02)
         loc4 = loc3
+        loc5 = Location('House')
         self.assertEqual(loc4, loc3)
         self.assertNotEqual(loc3, loc2)
         self.assertEqual(loc4, loc1)
