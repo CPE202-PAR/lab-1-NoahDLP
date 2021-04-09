@@ -10,13 +10,13 @@ class TestLocation(unittest.TestCase):
         loc = Location('SLO', 35.3, -120.7)
         self.assertEqual(repr(loc), "Location('SLO', 35.3, -120.7)")
 
-    def test_init(self):
+    def test_init(self) -> None:
         loc = Location('Porterville', 36.07, 119.02)
         self.assertEqual(loc.name, 'Porterville')
         self.assertEqual(loc.lat, 36.07)
         self.assertEqual(loc.lon, 119.02)
 
-    def test_eq(self):
+    def test_eq(self) -> None:
         loc1 = Location('Porterville', 36.07, 119.02)
         loc2 = Location('Fresno', 36.74, 119.79)
         loc3 = Location('Porterville', 36.07, 119.02)
