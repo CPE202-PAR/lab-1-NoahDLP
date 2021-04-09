@@ -17,7 +17,6 @@ class Location:
             and self.lat == other.lat
             and self.lon == other.lon)
         else:
-
             return False
 
 def main() -> None:                 # pragma: no cover
