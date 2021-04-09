@@ -51,7 +51,7 @@ class TestLab1(unittest.TestCase):
         reverse_list_mutate(intlist)
         self.assertEqual(intlist,[2,9,3,6,2,1])
 
-    def test_reverse_mutate_02(self) -> None:
+    def test_reverse_mutate_03(self) -> None:
         intlist = [5,2]
         reverse_list_mutate(intlist)
         self.assertEqual(intlist,[2,5])
