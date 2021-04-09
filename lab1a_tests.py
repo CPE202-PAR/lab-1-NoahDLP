@@ -15,16 +15,51 @@ class TestLab1(unittest.TestCase):
         with self.assertRaises(ValueError):  # used to check for exception
             max_list_iter(tlist)
 
-    def test_reverse(self) -> None:
+    def test_max_list_03(self) -> None:
+        tlist = [4,5,2]
+        self.assertEqual(max_list_iter(tlist),5)
+
+    def test_max_list_04(self) -> None:
+        tlist = [2]
+        self.assertEqual(max_list_iter(tlist),2)
+
+    def test_reverse_01(self) -> None:
         intlist = [1,2,3]
         revlist = reverse_list(intlist)
         self.assertEqual(revlist,[3,2,1])
         self.assertEqual(intlist,[1,2,3])
 
-    def test_reverse_mutate(self) -> None:
+    def test_reverse_02(self) -> None:
+        intlist = [5,3,8]
+        revlist = reverse_list(intlist)
+        self.assertEqual(revlist,[8,3,5])
+        self.assertEqual(intlist,[5,3,8])
+
+    def test_reverse_03(self) -> None:
+        intlist = []
+        revlist = reverse_list(intlist)
+        self.assertEqual(revlist,[])
+        self.assertEqual(intlist,[])
+
+    def test_reverse_mutate_01(self) -> None:
         intlist = [1,2,3]
         reverse_list_mutate(intlist)
         self.assertEqual(intlist,[3,2,1])
+
+    def test_reverse_mutate_02(self) -> None:
+        intlist = [1,2,6,3,9,2]
+        reverse_list_mutate(intlist)
+        self.assertEqual(intlist,[2,9,3,6,2,1])
+
+    def test_reverse_mutate_02(self) -> None:
+        intlist = [5,2]
+        reverse_list_mutate(intlist)
+        self.assertEqual(intlist,[2,5])
+
+    def test_reverse_mutate_04(self) -> None:
+        intlist = None
+        with self.assertRaises(ValueError):
+            reverse_list_mutate(intlist)
 
 if __name__ == "__main__":
         unittest.main()
