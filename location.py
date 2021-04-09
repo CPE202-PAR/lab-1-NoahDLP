@@ -7,12 +7,11 @@ class Location:
         self.lat = lat      # latitude in degrees (-90.0 to 90.0)
         self.lon = lon      # longitude in degrees (-180.0 to 180.0)
 
-    def __eq__(self, other: object) -> bool:
+        def __eq__(self, other):
         if isinstance(other, Location):
-            return(self.name==other.name and
-                   self.lat==other.lat and
-                   self.lon==other.lon
-                   )
+            return (self.name == other.name
+            and self.lat == other.lat
+            and self.lon == other.lon)
         else:
             return False
         
