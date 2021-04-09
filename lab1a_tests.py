@@ -23,6 +23,10 @@ class TestLab1(unittest.TestCase):
         tlist = [2]
         self.assertEqual(max_list_iter(tlist),2)
 
+    def test_max_list_05(self) -> None:
+        tlist = []
+        self.assertEqual(max_list_iter(tlist),None)
+
     def test_reverse_01(self) -> None:
         intlist = [1,2,3]
         revlist = reverse_list(intlist)
@@ -40,6 +44,11 @@ class TestLab1(unittest.TestCase):
         revlist = reverse_list(intlist)
         self.assertEqual(revlist,[])
         self.assertEqual(intlist,[])
+
+    def test_reverse_04(self) -> None:
+        intlist = None
+        with self.assertRaises(ValueError):
+            reverse_list(intlist)
 
     def test_reverse_mutate_01(self) -> None:
         intlist = [1,2,3]
