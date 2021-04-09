@@ -54,4 +54,10 @@ def reverse_list_mutate(int_list: Optional[List]) -> None:
    if int_list is None:
       raise ValueError
    else:
-      int_list[:] = reverse_list(int_list)
+      length = len(int_list)
+      revLst = [None] * length
+      for i in int_list:
+         length = length - 1
+         revLst[length] = i
+      for i in range(len(revLst)):
+         int_list[i] = revLst[i]
