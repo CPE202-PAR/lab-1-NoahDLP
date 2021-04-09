@@ -29,7 +29,7 @@ def max_list_iter(int_list: Optional[List]) -> Optional[int]:
       return max
 
 # Maybe_List -> Maybe_List
-def reverse_list(int_list: Optional[List]) -> Optional[int]:
+def reverse_list(int_list: Optional[List]) -> Optional[List]:
    """reverses a list of numbers and returns the reversed list
    If list is None, raises ValueError"""
 
