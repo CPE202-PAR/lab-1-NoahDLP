@@ -7,10 +7,6 @@ class Location:
         self.lat = lat      # latitude in degrees (-90.0 to 90.0)
         self.lon = lon      # longitude in degrees (-180.0 to 180.0)
 
-# ADD BOILERPLATE HERE (__eq__ and __repr__ functions)
-    def __repr__(self):
-        return ("Location({!r}, {!r}, {!r})".format(self.name, self.lat, self.lon))
-
     def __eq__(self, other):
         if isinstance(other, Location):
             return (self.name == other.name
@@ -18,6 +14,9 @@ class Location:
             and self.lon == other.lon)
         else:
             return False
+        
+    def __repr__(self):
+        return ("Location({!r}, {!r}, {!r})".format(self.name, self.lat, self.lon))
 
 def main() -> None:                 # pragma: no cover
     loc1 = Location("SLO", 35.3, -120.7)
