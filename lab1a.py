@@ -37,7 +37,11 @@ def reverse_list(int_list: Optional[List]) -> Optional[List]:
    if int_list is None:
       raise ValueError
    else:
-      revLst = int_list[::-1]
+      length = len(int_list)
+      revLst = [None]*length
+      for i in int_list:
+         length = length -1
+         revLst[length] = i
       return revLst
 
 
