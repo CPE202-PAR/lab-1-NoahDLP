@@ -25,6 +25,7 @@ class TestLocation(unittest.TestCase):
         self.assertEqual(loc4, loc3)
         self.assertNotEqual(loc3, loc2)
         self.assertEqual(loc4, loc1)
+        self.assertFalse(loc1 == loc5)
         self.assertFalse(loc3.__eq__(loc2))
         self.assertTrue(loc3.__eq__(loc1))
 
